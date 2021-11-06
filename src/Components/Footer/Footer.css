@@ -1,0 +1,35 @@
+:root {
+	font-size: 16px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.footer {
+	padding: 2rem 1rem;
+	background-color: #181d27;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	width: 100vw;
+}
+
+.social-media {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+	gap: 0.5rem;
+}
+
+.social-media .mme-icons a {
+	margin-left: 0.5rem;
+	font-size: 1.4rem;
+}
+
+.footer * {
+	color: lightgray;
+}

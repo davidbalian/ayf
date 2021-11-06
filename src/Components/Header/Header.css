@@ -1,0 +1,88 @@
+:root {
+	font-size: 16px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.header {
+	height: 5rem;
+	width: 100vw;
+	padding: 0 2rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgba(255, 255, 255, 0.85);
+	border-bottom: 1px solid lightgray;
+}
+
+.header:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.header img {
+	height: 7rem;
+	width: auto;
+	margin-top: 3rem;
+	cursor: pointer;
+}
+
+.menu-text {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 5rem;
+}
+
+.nav-container {
+	position: relative;
+}
+
+.header nav {
+	position: fixed;
+	top: 5rem;
+	right: 2rem;
+	border: 1px solid lightgray;
+	border-top: none;
+	padding: 0.5rem 1rem;
+	background-color: rgba(255, 255, 255, 0.85);
+	backdrop-filter: blur(10px);
+	border-bottom-left-radius: 0.5rem;
+	border-bottom-right-radius: 0.5rem;
+}
+
+.header nav p {
+	margin-bottom: 1rem;
+}
+
+.header nav p:last-child {
+	margin-bottom: 0;
+}
+
+.header p {
+	font-size: 1.2rem;
+	cursor: pointer;
+}
+
+.header p:hover {
+	text-decoration: underline;
+}
+
+.menu-arrow {
+	cursor: pointer;
+	font-size: 1.6rem;
+}
