@@ -27,3 +27,21 @@
 a {
 	color: rgb(0, 0, 180);
 }
+
+@media only screen and (min-width: 768px) {
+	.about {
+		padding: 2rem 10rem;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.about {
+		padding: 2rem 15rem;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.about {
+		padding: 2rem 20rem;
+	}
+}

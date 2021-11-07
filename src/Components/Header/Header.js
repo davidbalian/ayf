@@ -4,23 +4,20 @@ import { FiArrowDown } from "react-icons/fi";
 import "./Header.css";
 
 const Header = () => {
-	const [clicked, setClicked] = useState(false);
+	const [show, setShow] = useState(false);
 
 	return (
 		<div className='header'>
 			<img src={logo} alt='GEM Logo' />
-			<div className='nav-container'>
+			<div className='nav-container' onClick={() => setShow(!show)}>
 				<div className='menu-text'>
-					<p onClick={() => setClicked(!clicked)}>Menu</p>
-					<FiArrowDown
-						className='menu-arrow'
-						onClick={() => setClicked(!clicked)}
-					/>
+					<p>Menu</p>
+					<FiArrowDown className='menu-arrow' />
 				</div>
-				<nav style={{ display: clicked ? "block" : "none" }}>
-					<p onClick={() => setClicked(!clicked)}>Home</p>
-					<p onClick={() => setClicked(!clicked)}>Gallery</p>
-					<p onClick={() => setClicked(!clicked)}>About</p>
+				<nav id={show ? "" : "hide"}>
+					<p>Home</p>
+					<p>Gallery</p>
+					<p>About</p>
 				</nav>
 			</div>
 		</div>
