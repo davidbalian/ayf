@@ -7,7 +7,11 @@ const Footer = () => {
 		<div className='footer'>
 			<p>
 				Created by{" "}
-				<a href='https://www.facebook.com/davbaly/' target='_blank'>
+				<a
+					href='https://www.facebook.com/davbaly/'
+					target='_blank'
+					rel='noreferrer'
+				>
 					David Balian
 				</a>
 			</p>
@@ -16,12 +20,14 @@ const Footer = () => {
 					<a
 						href='https://www.facebook.com/GEM-Badanegan-307178382811648'
 						target='_blank'
+						rel='noreferrer'
 					>
 						<AiFillFacebook />
 					</a>
 					<a
 						href='https://www.instagram.com/gem_badanegan/'
 						target='_blank'
+						rel='noreferrer'
 					>
 						<AiFillInstagram />
 					</a>

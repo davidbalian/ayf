@@ -27,7 +27,11 @@ const About = () => {
 				<h3>Why has this website been made?</h3>
 				<p>
 					I (the creator of the site,{" "}
-					<a href='https://www.facebook.com/davbaly/' target='_blank'>
+					<a
+						href='https://www.facebook.com/davbaly/'
+						target='_blank'
+						rel='noreferrer'
+					>
 						David Balian
 					</a>
 					) decided to make this website in order to organize the
