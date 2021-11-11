@@ -70,21 +70,26 @@
 	display: none;
 }
 
-.header nav p {
+.p {
+	color: black;
+	text-decoration: none;
+}
+
+.header nav .p {
 	margin-bottom: 1rem;
 	margin-right: 0;
 }
 
-.header nav p:last-child {
+.header nav .p:last-child {
 	margin-bottom: 0;
 }
 
-.header p {
+.header .p {
 	font-size: 1.2rem;
 	cursor: pointer;
 }
 
-.header p:hover {
+.header .p:hover {
 	text-decoration: underline;
 }
 
@@ -116,12 +121,12 @@
 		background-color: rgba(0, 0, 0, 0);
 	}
 
-	.header nav p {
+	.header nav .p {
 		margin-bottom: 0;
 		margin-right: 2rem;
 	}
 
-	.header nav p:last-child {
+	.header nav .p:last-child {
 		margin-right: 0;
 	}
 
@@ -153,12 +158,12 @@
 		background-color: rgba(0, 0, 0, 0);
 	}
 
-	.header nav p {
+	.header nav .p {
 		margin-bottom: 0;
 		margin-right: 2rem;
 	}
 
-	.header nav p:last-child {
+	.header nav .p:last-child {
 		margin-right: 0;
 	}
 
