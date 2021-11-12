@@ -16,7 +16,7 @@ const Header = () => {
 					<FiArrowDown className='menu-arrow' />
 				</div>
 				<nav id={show ? "" : "hide"}>
-					<Link to='/' className='p'>
+					<Link exact to='/' className='p'>
 						Home
 					</Link>
 					<Link to='/gallery' className='p'>

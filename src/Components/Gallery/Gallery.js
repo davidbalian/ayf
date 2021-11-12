@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Gallery.css";
 
 const Gallery = () => {
 	let imgLinks = [100];
+	let start = 1;
+	const [year, setYear] = useState("2019-1");
 
-	for (let i = 1; i <= 100; i++) {
+	if (year === "2019-1") {
+		start = 1;
+	} else {
+		start = 51;
+	}
+
+	for (let i = start; i < start + 50; i++) {
 		imgLinks[
 			i
 		] = `https://cdn.jsdelivr.net/gh/davidbalian/ayf-media/2019_${i}.jpg`;
@@ -12,9 +20,23 @@ const Gallery = () => {
 
 	return (
 		<div className='gallery'>
-			{imgLinks.slice(1).map((link) => (
-				<img src={link} alt='camp 2019 img' />
-			))}
+			<label htmlFor='list'>Select Camp Year: </label>
+			<select
+				name='list'
+				id='list'
+				value={year}
+				onChange={(e) => {
+					setYear(e.target.value);
+				}}
+			>
+				<option value='2019-1'>2019-1</option>
+				<option value='2019-2'>2019-2</option>
+			</select>
+			<div className='images'>
+				{imgLinks.slice(1).map((link) => (
+					<img src={link} alt='camp 2019 img' />
+				))}
+			</div>
 		</div>
 	);
 };

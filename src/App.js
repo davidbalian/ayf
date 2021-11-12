@@ -12,11 +12,11 @@ const App = () => {
 			<div>
 				<Header />
 				<Switch>
-					<Route exact path='/'>
+					<Route exact path='/ayf'>
 						<Hero />
-						<About id='about' />
+						<About />
 					</Route>
-					<Route path='/gallery'>
+					<Route path='/ayf/gallery'>
 						<Gallery />
 					</Route>
 				</Switch>
