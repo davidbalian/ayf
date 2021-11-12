@@ -12,18 +12,18 @@ const Header = () => {
 			<img src={logo} alt='GEM Logo' />
 			<div className='nav-container' onClick={() => setShow(!show)}>
 				<div className='menu-text'>
-					<p>Menu</p>
+					<a>Menu</a>
 					<FiArrowDown className='menu-arrow' />
 				</div>
 				<nav id={show ? "" : "hide"}>
-					<Link exact to='/ayf/' className='p'>
-						Home
+					<Link exact to='/ayf/'>
+						<a className='a'>Home</a>
 					</Link>
-					<Link to='/ayf/gallery' className='p'>
-						Gallery
+					<Link to='/ayf/gallery'>
+						<a className='a'>Gallery</a>
 					</Link>
-					<Link to='/ayf/' className='p'>
-						About
+					<Link to='/ayf/'>
+						<a className='a'>About</a>
 					</Link>
 				</nav>
 			</div>
