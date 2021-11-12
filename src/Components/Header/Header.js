@@ -16,13 +16,13 @@ const Header = () => {
 					<FiArrowDown className='menu-arrow' />
 				</div>
 				<nav id={show ? "" : "hide"}>
-					<Link exact to='/' className='p'>
+					<Link exact to='/ayf/' className='p'>
 						Home
 					</Link>
-					<Link to='/gallery' className='p'>
+					<Link to='/ayf/gallery' className='p'>
 						Gallery
 					</Link>
-					<Link to='/#about' className='p'>
+					<Link to='/ayf/' className='p'>
 						About
 					</Link>
 				</nav>
