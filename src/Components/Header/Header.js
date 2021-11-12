@@ -9,21 +9,33 @@ const Header = () => {
 
 	return (
 		<div className='header'>
-			<img src={logo} alt='GEM Logo' />
+			<Link exact to='/ayf/'>
+				<img src={logo} alt='GEM Logo' />
+			</Link>
 			<div className='nav-container' onClick={() => setShow(!show)}>
 				<div className='menu-text'>
-					<a>Menu</a>
+					{/* eslint-disable-next-line*/}
+					<a href='#'>Menu</a>
 					<FiArrowDown className='menu-arrow' />
 				</div>
 				<nav id={show ? "" : "hide"}>
 					<Link exact to='/ayf/'>
-						<a className='a'>Home</a>
+						{/* eslint-disable-next-line*/}
+						<a className='a' href='#'>
+							Home
+						</a>
 					</Link>
 					<Link to='/ayf/gallery'>
-						<a className='a'>Gallery</a>
+						{/* eslint-disable-next-line*/}
+						<a className='a' href='#'>
+							Gallery
+						</a>
 					</Link>
 					<Link to='/ayf/'>
-						<a className='a'>About</a>
+						{/* eslint-disable-next-line*/}
+						<a className='a' href='#'>
+							About
+						</a>
 					</Link>
 				</nav>
 			</div>

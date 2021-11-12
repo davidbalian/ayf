@@ -2,20 +2,20 @@ import React, { useState } from "react";
 import "./Gallery.css";
 
 const Gallery = () => {
-	let imgLinks = [100];
+	let links_2019 = [795];
 	let start = 1;
-	const [year, setYear] = useState("2019-1");
+	const [year, setYear] = useState("2019");
 
-	if (year === "2019-1") {
+	/*if (year === "2019") {
 		start = 1;
 	} else {
 		start = 51;
-	}
+	}*/
 
-	for (let i = start; i < start + 50; i++) {
-		imgLinks[
+	for (let i = start; i <= 795; i++) {
+		links_2019[
 			i
-		] = `https://cdn.jsdelivr.net/gh/davidbalian/ayf-media/2019_${i}.jpg`;
+		] = `https://cdn.jsdelivr.net/gh/davidbalian/ayf-camp-2019-media/ayf-camp-2019-${i}.jpg`;
 	}
 
 	return (
@@ -29,12 +29,11 @@ const Gallery = () => {
 					setYear(e.target.value);
 				}}
 			>
-				<option value='2019-1'>2019-1</option>
-				<option value='2019-2'>2019-2</option>
+				<option value='2019'>2019</option>
 			</select>
 			<div className='images'>
-				{imgLinks.slice(1).map((link) => (
-					<img src={link} alt='camp 2019 img' />
+				{links_2019.slice(1).map((link) => (
+					<img loading='lazy' src={link} alt='camp 2019 img' />
 				))}
 			</div>
 		</div>
