@@ -11,6 +11,7 @@ const Footer = () => {
 					href='https://www.facebook.com/davbaly/'
 					target='_blank'
 					rel='noreferrer'
+					className='david'
 				>
 					David Balian
 				</a>

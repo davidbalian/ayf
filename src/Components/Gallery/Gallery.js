@@ -3,16 +3,11 @@ import "./Gallery.css";
 
 const Gallery = () => {
 	let links_2019 = [795];
-	let start = 1;
 	const [year, setYear] = useState("2019");
+	const [start, setStart] = useState(1);
+	const [end, setEnd] = useState(25);
 
-	/*if (year === "2019") {
-		start = 1;
-	} else {
-		start = 51;
-	}*/
-
-	for (let i = start; i <= 795; i++) {
+	for (let i = start; i <= end; i++) {
 		links_2019[
 			i
 		] = `https://cdn.jsdelivr.net/gh/davidbalian/ayf-camp-2019-media/ayf-camp-2019-${i}.jpg`;
@@ -31,9 +26,23 @@ const Gallery = () => {
 			>
 				<option value='2019'>2019</option>
 			</select>
-			<div className='images'>
+			{window.addEventListener("scroll", () => {
+				if (
+					window.innerHeight + window.pageYOffset >=
+					document.body.offsetHeight - 2
+				) {
+					setStart((prevStart) => 25 + prevStart);
+					setEnd((prevEnd) => 25 + prevEnd);
+				}
+			})}
+			<div className='images' id='images'>
 				{links_2019.slice(1).map((link) => (
-					<img loading='lazy' src={link} alt='camp 2019 img' />
+					<img
+						key={link}
+						loading='lazy'
+						src={link}
+						alt='camp 2019 img'
+					/>
 				))}
 			</div>
 		</div>
